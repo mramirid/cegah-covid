@@ -6,4 +6,5 @@
     <string name="prevent_covid">Cegah Covid</string>
     <string name="splash_screen">Splash Screen Activity</string>
     <string name="dashboard">Dashboard</string>
+    <string name="alert_covid">Waspadai COVID-19</string>
 </resources>

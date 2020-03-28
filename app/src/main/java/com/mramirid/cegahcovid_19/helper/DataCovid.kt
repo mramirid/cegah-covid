@@ -61,7 +61,7 @@ object DataCovid {
         infoCovidList.add(
             InfoCovid(
                 4,
-                "Diagnosis Virus Corona",
+                "Diagnosis COVID-19",
                 "Untuk menentukan apakah pasien terinfeksi virus Corona, dokter akan menanyakan gejala yang dialami pasien. Dokter juga akan bertanya apakah pasien bepergian atau tinggal di daerah yang memiliki kasus infeksi virus Corona sebelum gejala muncul.\n\n" +
                         "Guna memastikan diagnosis COVID-19, dokter akan melakukan pemeriksaan lanjutan di antaranya: uji sampel darah, tes usap tenggorokan untuk meneliti sampel dahak (tes PCR) dan rontgen dada untuk mendeteksi infiltrat atau cairan di paru-paru",
                 R.drawable.ic_search,
@@ -72,7 +72,7 @@ object DataCovid {
         infoCovidList.add(
             InfoCovid(
                 5,
-                "Pengobatan Virus Corona",
+                "Pengobatan COVID-19",
                 "Infeksi virus Corona atau COVID-19 belum bisa diobati, tetapi ada beberapa langkah yang dapat dilakukan dokter untuk meredakan gejalanya dan mencegah penyebaran virus, diantaranya: merujuk penderita COVID-19 untuk menjalani perawatan dan karatina di rumah sakit yang ditunjuk, memberikan obat pereda demam dan nyeri yang aman dan sesuai kondisi penderita, menganjurkan penderita COVID-19 untuk melakukan isolasi mandiri dan istirahat yang cukup, menganjurkan penderita COVID-19 untuk banyak minum air putih untuk menjaga kadar cairan tubuh.",
                 R.drawable.ic_obat,
                 R.drawable.drug_image
@@ -82,21 +82,21 @@ object DataCovid {
         infoCovidList.add(
             InfoCovid(
                 6,
-                "Komplikasi Virus Corona",
+                "Komplikasi COVID-19",
                 "Pada kasus yang parah, infeksi virus Corona bisa menyebabkan beberapa komplikasi serius diantaranya: Pneumonia, infeksi sekunder pada organ lain, gagal ginjal, Acute cardiac injury, Acute respiratory distress syndrome dan kematian",
-                R.drawable.ic_alert,
-                R.drawable.gejala_image
+                R.drawable.ic_split,
+                R.drawable.complication_image
             )
         )
 
         infoCovidList.add(
             InfoCovid(
                 7,
-                "Pencegahan Virus Corona",
-                "Untuk menentukan apakah pasien terinfeksi virus Corona, dokter akan menanyakan gejala yang dialami pasien. Dokter juga akan bertanya apakah pasien bepergian atau tinggal di daerah yang memiliki kasus infeksi virus Corona sebelum gejala muncul.\n\n" +
-                        "Guna memastikan diagnosis COVID-19, dokter akan melakukan pemeriksaan lanjutan di antaranya: uji sampel darah, tes usap tenggorokan untuk meneliti sampel dahak (tes PCR) dan rontgen dada untuk mendeteksi infiltrat atau cairan di paru-paru",
-                R.drawable.ic_alert,
-                R.drawable.gejala_image
+                "Pencegahan COVID-19",
+                "Sampai saat ini, belum ada vaksin untuk mencegah infeksi virus Corona atau COVID-19. Oleh sebab itu, cara pencegahan yang terbaik adalah dengan menghindari faktor-faktor yang bisa menyebabkan Anda terinfeksi virus ini, diantaranya: hindari bepergian ke tempat-tempat umum yang ramai pengunjung (social distancing), gunakan masker saat beraktivitas di tempat umum atau keramaian, rutin mencuci tangan dengan air dan sabun atau hand sanitizer yang mengandung alkohol minimal 60% setelah beraktivitas di luar rumah atau di tempat umum, jangan menyentuh mata, mulut, dan hidung sebelum mencuci tangan, hindari kontak dengan hewan, terutama hewan liar. Bila terjadi kontak dengan hewan, cuci tangan setelahnya, masak daging sampai benar-benar matang sebelum dikonsumsi, tutup mulut dan hidung dengan tisu saat batuk atau bersin, kemudian buang tisu ke tempat sampah, hindari berdekatan dengan orang yang sedang sakit demam, batuk, atau pilek, jaga kebersihan benda yang sering disentuh dan kebersihan lingkungan.\n\n" +
+                        "Untuk orang yang diduga terkena COVID-19 atau termasuk kategori ODP (orang dalam pemantauan), ada beberapa langkah yang bisa dilakukan agar virus Corona tidak menular ke orang lain, diantaranya: jangan keluar rumah, kecuali untuk mendapatkan pengobatan, periksakan diri ke dokter hanya bila Anda mengalami gejala gangguan pernapasan yang disertai demam atau memenuhi kriteria PDP (pasien dalam pengawasan), usahakan untuk tinggal terpisah dari orang lain untuk sementara waktu. Bila tidak memungkinkan, gunakan kamar tidur dan kamar mandi yang berbeda dengan yang digunakan orang lain, larang dan cegah orang lain untuk mengunjungi atau menjenguk Anda sampai Anda benar-benar sembuh, sebisa mungkin jangan melakukan pertemuan dengan orang yang sedang sedang sakit, hindari berbagi penggunaan alat makan dan minum, alat mandi, serta perlengkapan tidur dengan orang lain, pakai masker dan sarung tangan bila sedang berada di tempat umum atau sedang bersama orang lain, gunakan tisu untuk menutup mulut dan hidung bila batuk atau bersin, lalu segera buang tisu ke tempat sampah.",
+                R.drawable.ic_check,
+                R.drawable.checklist_image
             )
         )
 
