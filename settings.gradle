@@ -1,0 +1,2 @@
+rootProject.name='Cegah Covid-19'
+include ':app'
