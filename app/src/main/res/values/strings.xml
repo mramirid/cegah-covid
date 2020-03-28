@@ -10,4 +10,5 @@
     <string name="source_covid19">Sumber Informasi COVID-19</string>
     <string name="source_api">Kawal Corona API</string>
     <string name="checkup_questions">Acuan Pertanyaan Checkup</string>
+    <string name="indonesia_covid_cases">Kasus COVID-19 di Indonesia</string>
 </resources>
