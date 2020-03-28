@@ -18,7 +18,7 @@
         tools:layout="@layout/fragment_checkup" />
 
     <fragment
-        android:id="@+id/navigation_statistics"
+        android:id="@+id/navigation_stats"
         android:name="com.mramirid.cegahcovid_19.ui.statistics.StatisticsFragment"
         android:label="@string/statistics"
         tools:layout="@layout/fragment_statistics" />

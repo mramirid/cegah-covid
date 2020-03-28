@@ -1,12 +1,9 @@
 <resources>
     <string name="app_name">Cegah Covid-19</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-
-    <string name="title_activity_login">LoginActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="statistics">Statistics</string>
     <string name="checkup">Checkup</string>
+    <string name="prevent_covid">Cegah Covid</string>
+    <string name="splash_screen">Splash Screen Activity</string>
+    <string name="dashboard">Dashboard</string>
 </resources>

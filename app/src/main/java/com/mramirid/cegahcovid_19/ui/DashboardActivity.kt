@@ -22,7 +22,7 @@ class DashboardActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(setOf(
             R.id.navigation_home,
             R.id.navigation_checkup,
-            R.id.navigation_statistics
+            R.id.navigation_stats
         ))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
