@@ -4,25 +4,42 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="true"
         android:icon="@mipmap/cegah_covid_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/cegah_covid_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.detail.DetailInfoCovidActivity"
+            android:parentActivityName=".ui.DashboardActivity"
+            android:theme="@style/FullscreenTheme">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.DashboardActivity" />
+
+        </activity>
+
         <activity
             android:name=".ui.splash.SplashScreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/FullscreenTheme">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
         <activity
             android:name=".ui.DashboardActivity"
             android:label="@string/dashboard" />
+
     </application>
 
 </manifest>
