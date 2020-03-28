@@ -20,6 +20,6 @@
     <fragment
         android:id="@+id/navigation_stats"
         android:name="com.mramirid.cegahcovid_19.ui.statistics.StatisticsFragment"
-        android:label="@string/statistics"
+        android:label="@string/statistic"
         tools:layout="@layout/fragment_statistics" />
 </navigation>
