@@ -37,7 +37,7 @@ object DataCovid {
             InfoCovid(
                 2,
                 "Kapan harus ke dokter?",
-                "Segera ke dokter bila Anda mengalami gejala infeksi virus Corona (COVID-19) seperti yang disebutkan di atas, terutama jika gejala muncul 2 minggu setelah kembali dari daerah yang memiliki kasus COVID-19 atau berinteraksi dengan penderita infeksi virus Corona.\n\n" +
+                "Segera ke dokter bila Anda mengalami gejala infeksi virus Corona (COVID-19), terutama jika gejala muncul 2 minggu setelah kembali dari daerah yang memiliki kasus COVID-19 atau berinteraksi dengan penderita infeksi virus Corona.\n\n" +
                         "Bila Anda mungkin terpapar virus Corona namun tidak mengalami gejala apa pun, Anda tidak perlu pergi ke rumah sakit untuk memeriksakan diri, cukup tinggal di rumah selama 14 hari dan membatasi kontak dengan orang lain.\n\n" +
                         "Aplikasi ini juga memiliki fitur untuk membantu Anda memeriksa risiko tertular virus Corona dengan lebih mudah. Untuk menggunakan fitur tersebut, silakan menuju ke tab checkup di halaman utama",
                 R.drawable.ic_hospital,
@@ -100,6 +100,6 @@ object DataCovid {
             )
         )
 
-        return infoCovidList;
+        return infoCovidList
     }
 }

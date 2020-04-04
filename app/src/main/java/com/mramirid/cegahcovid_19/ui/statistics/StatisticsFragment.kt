@@ -35,7 +35,11 @@ class StatisticsFragment : Fragment() {
 
         statisticsViewModel.getStatusRequest().observe(viewLifecycleOwner, Observer { hasReceived ->
             if (!hasReceived) {
-                Toast.makeText(context, "Tidak dapat terhubung ke internet, coba lagi nanti", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    context,
+                    "Tidak dapat terhubung ke internet, coba lagi nanti",
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         })
     }

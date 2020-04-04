@@ -26,11 +26,13 @@ class DashboardActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(setOf(
-            R.id.navigation_home,
-            R.id.navigation_checkup,
-            R.id.navigation_stats
-        ))
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_home,
+                R.id.navigation_checkup,
+                R.id.navigation_stats
+            )
+        )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
@@ -41,8 +43,11 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val moveToWebsite = when(item.itemId) {
-            R.id.source_covid19 -> Intent(Intent.ACTION_VIEW, Uri.parse("https://www.alodokter.com/virus-corona"))
+        val moveToWebsite = when (item.itemId) {
+            R.id.source_covid19 -> Intent(
+                Intent.ACTION_VIEW,
+                Uri.parse("https://www.alodokter.com/virus-corona")
+            )
             R.id.source_api -> Intent(Intent.ACTION_VIEW, Uri.parse("https://kawalcorona.com/api/"))
             else -> Intent(this, DashboardActivity::class.java)
         }

@@ -1,118 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.statistics.StatisticsFragment">
 
-    <View
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/img_icon_info"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/ic_show_chart_white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_title_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/indonesia_covid_cases"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_icon_info"
-        app:layout_constraintStart_toEndOf="@id/img_icon_info"
-        app:layout_constraintTop_toTopOf="@id/img_icon_info" />
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_active_cases"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="6dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img_icon_info">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_subtitle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp">
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/img_icon_positive"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:src="@drawable/ic_positive"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/img_icon_info"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_show_chart_white"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
 
             <TextView
-                android:id="@+id/tv_total_positive"
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_title_info"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="16dp"
                 android:fontFamily="sans-serif-medium"
-                android:maxLines="1"
-                android:textColor="@android:color/holo_orange_dark"
-                android:textSize="38sp"
-                app:layout_constraintEnd_toEndOf="@id/img_icon_positive"
-                app:layout_constraintStart_toStartOf="@id/img_icon_positive"
-                app:layout_constraintTop_toBottomOf="@id/img_icon_positive"
-                android:text="-" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kasus Positif"
-                android:textColor="@color/colorPrimary"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@id/tv_total_positive"
-                app:layout_constraintStart_toStartOf="@id/tv_total_positive"
-                app:layout_constraintTop_toBottomOf="@id/tv_total_positive" />
+                android:text="@string/indonesia_covid_cases"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/img_icon_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/img_icon_info"
+                app:layout_constraintTop_toTopOf="@id/img_icon_info" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.google.android.material.card.MaterialCardView>
-
-    <GridLayout
-        android:id="@+id/grid_cases"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:alignmentMode="alignMargins"
-        android:columnCount="2"
-        android:columnOrderPreserved="false"
-        android:rowCount="3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card_active_cases">
-
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="wrap_content"
+            android:id="@+id/card_active_cases"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
-            android:layout_margin="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
             app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
+            app:cardElevation="6dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container_subtitle">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -120,91 +75,156 @@
                 android:padding="16dp">
 
                 <ImageView
-                    android:id="@+id/img_icon_recovered"
+                    android:id="@+id/img_icon_positive"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/ic_recovered"
+                    android:src="@drawable/ic_positive"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
 
                 <TextView
-                    android:id="@+id/tv_total_recovered"
+                    android:id="@+id/tv_total_positive"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-medium"
                     android:maxLines="1"
-                    android:textColor="@android:color/holo_green_light"
+                    android:text="-"
+                    android:textColor="@android:color/holo_orange_dark"
                     android:textSize="38sp"
-                    app:layout_constraintEnd_toEndOf="@id/img_icon_recovered"
-                    app:layout_constraintStart_toStartOf="@id/img_icon_recovered"
-                    app:layout_constraintTop_toBottomOf="@id/img_icon_recovered"
-                    android:text="-" />
+                    app:layout_constraintEnd_toEndOf="@id/img_icon_positive"
+                    app:layout_constraintStart_toStartOf="@id/img_icon_positive"
+                    app:layout_constraintTop_toBottomOf="@id/img_icon_positive" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sembuh"
+                    android:text="Kasus Positif"
                     android:textColor="@color/colorPrimary"
                     android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="@id/tv_total_recovered"
-                    app:layout_constraintStart_toStartOf="@id/tv_total_recovered"
-                    app:layout_constraintTop_toBottomOf="@id/tv_total_recovered" />
+                    app:layout_constraintEnd_toEndOf="@id/tv_total_positive"
+                    app:layout_constraintStart_toStartOf="@id/tv_total_positive"
+                    app:layout_constraintTop_toBottomOf="@id/tv_total_positive" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </com.google.android.material.card.MaterialCardView>
 
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="wrap_content"
+        <GridLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:layout_margin="12dp"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="6dp">
+            android:layout_marginTop="8dp"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:rowCount="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_active_cases">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="16dp">
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
 
-                <ImageView
-                    android:id="@+id/img_icon_death"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/ic_death"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/tv_total_death"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:maxLines="1"
-                    android:textColor="@android:color/holo_red_light"
-                    android:textSize="38sp"
-                    app:layout_constraintEnd_toEndOf="@id/img_icon_death"
-                    app:layout_constraintStart_toStartOf="@id/img_icon_death"
-                    app:layout_constraintTop_toBottomOf="@id/img_icon_death"
-                    android:text="-" />
+                    <ImageView
+                        android:id="@+id/img_icon_recovered"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_recovered"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Meninggal"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="14sp"
-                    app:layout_constraintEnd_toEndOf="@id/tv_total_death"
-                    app:layout_constraintStart_toStartOf="@id/tv_total_death"
-                    app:layout_constraintTop_toBottomOf="@id/tv_total_death" />
+                    <TextView
+                        android:id="@+id/tv_total_recovered"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="1"
+                        android:text="-"
+                        android:textColor="@android:color/holo_green_light"
+                        android:textSize="38sp"
+                        app:layout_constraintEnd_toEndOf="@id/img_icon_recovered"
+                        app:layout_constraintStart_toStartOf="@id/img_icon_recovered"
+                        app:layout_constraintTop_toBottomOf="@id/img_icon_recovered" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sembuh"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_total_recovered"
+                        app:layout_constraintStart_toStartOf="@id/tv_total_recovered"
+                        app:layout_constraintTop_toBottomOf="@id/tv_total_recovered" />
 
-        </com.google.android.material.card.MaterialCardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </GridLayout>
+            </com.google.android.material.card.MaterialCardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_margin="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/img_icon_death"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_death"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_death"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:maxLines="1"
+                        android:text="-"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="38sp"
+                        app:layout_constraintEnd_toEndOf="@id/img_icon_death"
+                        app:layout_constraintStart_toStartOf="@id/img_icon_death"
+                        app:layout_constraintTop_toBottomOf="@id/img_icon_death" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Meninggal"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_total_death"
+                        app:layout_constraintStart_toStartOf="@id/tv_total_death"
+                        app:layout_constraintTop_toBottomOf="@id/tv_total_death" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

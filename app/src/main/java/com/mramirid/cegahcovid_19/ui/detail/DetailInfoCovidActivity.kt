@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_detail_info_covid.*
 class DetailInfoCovidActivity : AppCompatActivity() {
 
     companion object {
-        const val EXTRA_INFO = "extra_info";
+        const val EXTRA_INFO = "extra_info"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
