@@ -26,6 +26,11 @@ class StatisticsFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        Toast.makeText(
+            context,
+            "Mengambil data...",
+            Toast.LENGTH_SHORT
+        ).show()
         statisticsViewModel.fetchStatus()
         statisticsViewModel.getStatusCovidId().observe(viewLifecycleOwner, Observer { statusCovid ->
             tv_total_positive.text = statusCovid.positif
